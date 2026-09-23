@@ -1,0 +1,39 @@
+The starter files for the TechTrends application can be found in the course repository nd064_course_1/project/techtrends.
+
+This repository file structure can be found below:
+
+techtrends/
+├── README.md
+├── __init__.py
+├── app.py
+├── init_db.py
+├── requirements.txt
+├── schema.sql
+├── static
+│   └── css
+│       └── main.css
+└── templates
+    ├── 404.html
+    ├── about.html
+    ├── base.html
+    ├── create.html
+    ├── index.html
+    └── post.html
+Where:
+
+README.md contains the main steps of how to execute the TechTrends application
+__init__.py is a reserved method used to indicate that a directory is a Python package
+app.py contains the main logging of the TechTrends application
+init_db.py is a file that is used to initialize the posts database with a set of articles
+requirements.txt contains a list of packages that need to be installed before running the TechTrends application
+schema.sql outlines the posts database schema
+static/ folder contains the CSS files
+templates/ folder outlines the HTML structure of the TechTrends application
+Within the project folder(opens in a new tab) you will notice some extra folders and files. These will be used to record your commands and output screenshots.
+
+argocd - the folder that will contain the ArgoCD manifests
+helm - the folder that will contain the Helm chart files
+kubernetes - the folder that will contain Kubernetes declarative manifests
+screenshots - the folder that will contain all the screenshots that you take throughout the course
+Vagrantfile - the file containing the configuration for the vagrant box. Will be used to create a vagrant box locally.
+docker_commands - the file will be used to record any used Docker commands and outputs

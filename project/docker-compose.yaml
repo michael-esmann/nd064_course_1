@@ -1,0 +1,6 @@
+services:
+  techtrends:
+    image: mesmann/techtrends:latest
+    ports:
+      - "7111:3111"
+    restart: unless-stopped

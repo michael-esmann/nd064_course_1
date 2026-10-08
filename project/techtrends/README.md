@@ -1,10 +1,15 @@
-# TechTreds Web Application
+## Local Kubernetes Environment
 
-This is a Flask application that lists the latest articles within the cloud-native ecosystem.
+This project uses Rancher Desktop's local k3s cluster instead of the course
+Vagrant/VirtualBox VM. The local machine does not provide administrator
+permissions, and the Vagrant VM could not start because VirtualBox's
+`VBoxHeadless.exe` process crashed with Windows error `0xc0000005`.
 
-## Run 
+Rancher Desktop provides a supported local Kubernetes environment without
+requiring administrator access. Its node runs k3s, as indicated by the
+Kubernetes version suffix `+k3s1`.
 
-To run this application there are 2 steps required:
-
-1. Initialize the database by using the `python init_db.py` command. This will create or overwrite the `database.db` file that is used by the web application.
-2.  Run the TechTrends application by using the `python app.py` command. The application is running on port `3111` and you can access it by querying the `http://127.0.0.1:3111/` endpoint.
+$ kubectl version  
+Client Version: v1.36.3  
+Kustomize Version: v5.8.1  
+Server Version: v1.36.3+k3s1  

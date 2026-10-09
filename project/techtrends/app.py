@@ -7,11 +7,21 @@ from flask import Flask, jsonify, render_template, request, url_for, redirect, f
 from werkzeug.exceptions import abort
 
 
+class BelowErrorFilter(logging.Filter):
+    def filter(self, record):
+        return record.levelno < logging.ERROR
+
+
+stdout_handler = logging.StreamHandler(sys.stdout)
+stdout_handler.addFilter(BelowErrorFilter())
+stderr_handler = logging.StreamHandler(sys.stderr)
+stderr_handler.setLevel(logging.ERROR)
+
 logging.basicConfig(
     level=logging.DEBUG,
-    format='%(levelname)s:%(name)s:%(message)s',
+    format='%(asctime)s %(levelname)s: %(message)s',
     datefmt='%d/%b/%Y %H:%M:%S',
-    stream=sys.stdout,
+    handlers=[stdout_handler, stderr_handler],
 )
 logger = logging.getLogger(__name__)
 db_connection_count = 0

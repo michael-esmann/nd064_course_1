@@ -1,0 +1,7 @@
+STDOUT:
+09/Oct/2026 18:30:46 INFO: Article "2020 CNCF Annual Report" retrieved!
+09/Oct/2026 18:30:46 INFO: About Us page retrieved!
+09/Oct/2026 18:30:46 INFO: Article "Stream verification" created!
+
+STDERR:
+09/Oct/2026 18:30:46 ERROR: Article with ID 999999 not found; returning 404.

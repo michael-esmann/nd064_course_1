@@ -69,7 +69,7 @@ def metrics():
 def post(post_id):
     post = get_post(post_id)
     if post is None:
-        logger.info('Article with ID %s not found; returning 404.', post_id)
+        logger.error('Article with ID %s not found; returning 404.', post_id)
         return render_template('404.html'), 404
     else:
         logger.info('Article "%s" retrieved!', post['title'])

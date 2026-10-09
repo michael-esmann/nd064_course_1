@@ -2,10 +2,10 @@ FROM python:3.8-slim
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY techtrends/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY techtrends .
 
 EXPOSE 3111
 

@@ -4,7 +4,7 @@ import sys
 
 from flask import Flask, jsonify, render_template, request, url_for, redirect, flash
 
-# from werkzeug.exceptions import abort Not used
+from werkzeug.exceptions import abort
 
 
 logging.basicConfig(
